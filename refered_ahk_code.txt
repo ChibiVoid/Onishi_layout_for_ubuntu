@@ -1,0 +1,395 @@
+#Requires AutoHotkey v2.0
+global hold_ms := 300  ; Adjust this value to change the hold duration required
+
+; Store key press timestamps
+global f_press_time := 0
+global k_press_time := 0
+
+
+;layer#0
+Space::{
+    Send("{BackSpace}")
+}
+
+vk1C::{
+    Send("{Space}")
+}
+vk1D::{
+    Send("{Enter}")
+}
+
+F14::{
+    Send("{Space}")
+}
+F13::{
+    Send("{Enter}")
+}
+
+*w::{
+    Send("{Blind}{l}")
+}
+*e::{
+    Send("{Blind}{u}")
+}
+*r::{
+    Send("{Blind}{f}")
+}
+*::{
+    Send("{Blind}{,}")
+}
+*i::{
+    Send("{Blind}{w}")
+}
+*o::{
+    Send("{Blind}{r}")
+}
+*p::{
+    Send("{Blind}{y}")
+}
+*q::{ ;capslock
+    Send("{Blind}{q}")
+}
+*a::{
+    Send("{Blind}{e}")
+}
+*s::{
+    Send("{Blind}{i}")
+}
+*d::{
+    Send("{Blind}{a}")
+}
+
+*f::{
+    ; f_press_time := A_TickCount
+    ; if !KeyWait("f", "T" . hold_ms/1000) {
+    ;     ; Key was held - don't send anything yet
+    ;     KeyWait("f")
+    ; } else {
+    ;     ; Quick tap - send normal character
+        Send("{Blind}{o}")
+    ; }
+}
+
+*g::{
+    Send("{Blind}{-}")
+}
+*j::{
+    Send("{Blind}{k}")
+}
+
+*k::{
+    ; k_press_time := A_TickCount
+    ; if !KeyWait("k", "T" . hold_ms/1000) {
+    ;     ; Key was held - don't send anything yet
+    ;     KeyWait("k")
+    ; } else {
+        ; Quick tap - send normal character
+        Send("{Blind}{t}")
+    ; }
+}
+
+*l::{
+    Send("{Blind}{n}")
+}
+*SC027::{ ;semicolon
+    Send("{Blind}{s}")
+}
+*SC028::{ ;colon
+    Send("{Blind}{h}")
+}
+*]::{
+    Send("{Blind}{p}")
+}
+*z::{
+    Send("{Blind}{z}")
+}
+*x::{
+    Send("{Blind}{x}")
+}
+*c::{
+    Send("{Blind}{c}")
+}
+*v::{
+    Send("{Blind}{v}")
+}
+*m::{
+    Send("{Blind}{g}")
+}
+*,::{
+    Send("{Blind}{d}")
+}
+*.::{
+    Send("{Blind}{m}")
+}
+*/::{
+    Send("{Blind}{j}")
+}
+*SC073::{
+    Send("{Blind}{b}")
+}
+*t::{
+    Send("{Blind}{,}")
+}
+
+
+;layer#1
+Space & w::{
+    Send("{Blind}{1}")
+}
+Space & e::{
+    Send("{Blind}{2}")
+}
+Space & r::{
+    Send("{Blind}{3}")
+}
+Space & t::{
+    Send("{Blind}{.}")
+}
+Space & i::{
+    Send("{Blind}{<}")
+}
+Space & o::{
+    Send("{Blind}{=}")
+}
+Space & p::{
+    Send("{Blind}{>}")
+}
+Space & q::{ ;capslock
+    Send("{Blind}{~}")
+}
+Space & a::{
+    Send("{Blind}{0}")
+}
+Space & s::{
+    Send("{Blind}{4}")
+}
+Space & d::{
+    Send("{Blind}{5}")
+}
+Space & f::{
+    Send("{Blind}{6}")
+}
+Space & g::{
+    Send("{Blind}{Tab}") 
+}
+Space & j::{
+    Send("{Blind}{^}")
+}
+Space & k::{
+    Send("{Blind}{+}")
+}
+Space & l::{
+    Send("{Blind}{-}")
+}
+Space & SC027::{ ;
+    Send("{Blind}{NumpadMult}")
+}
+Space & SC028::{ ;colon
+    Send("{Blind}{/}")
+}
+Space & ]::{
+    Send("{Blind}{%}")
+}
+Space & z::{
+    Send("{Blind}{$}")
+}
+Space & x::{
+    Send("{Blind}{7}")
+}
+Space & c::{
+    Send("{Blind}{8}")
+}
+Space & v::{
+    Send("{Blind}{9}")
+}
+Space & m::{
+    Send("{Blind}{_}")
+}
+Space & ,::{
+    Send("{Blind}{!}")
+}
+Space & .::{
+    Send("{Blind}{?}")
+}
+Space & /::{
+    Send("{Blind}{:}")
+}
+Space & SC073::{
+    Send("{Blind}{;}")
+}
+
+
+
+;layer#2 vkcode: vk1C
+vk1C & w::{
+    Send("{Blind}{[}")
+}
+vk1C & e::{
+    Send("{Blind}{`"}")
+}
+vk1C & r::{
+    Send("{Blind}{]}")
+}
+vk1C & t::{
+    Send("{Blind}{|}")
+}
+vk1C & i::{
+    Send("{Blind}{Escape}")
+}
+vk1C & o::{
+    Send("{Blind}{Up}")
+}
+vk1C & p::{
+    Send("{Blind}{CapsLock}") ;仮 todo:capslock + shiftみたいにトグルできるようにする
+}
+vk1C & q::{
+    Send("{Blind}{@}")
+}
+vk1C & a::{
+    Send("{Blind}{#}")
+}
+vk1C & s::{
+    Send("{Blind}{(}")
+}
+vk1C & d::{
+    Send("{Blind}{'}")
+}
+vk1C & f::{
+    Send("{Blind}{)}")
+}
+vk1C & g::{
+    Send("{Blind}{&}")
+}
+vk1C & j::{
+    Send("{Blind}{Volume_Up}")
+}
+vk1C & k::{
+    Send("{Blind}{Left}")
+}
+vk1C & l::{
+    Send("{Blind}{Down}")
+}
+vk1C & SC027::{
+    Send("{Blind}{Right}")
+}
+vk1C & SC028::{
+    Send("{Blind}{SC029}")
+}
+vk1C & ]::{
+    Send("{Blind}{PrintScreen}")
+}
+vk1C & z::{
+    Send("{Blind}{SC073}")
+}
+vk1C & x::{
+    Send("{Blind}{{}}")
+}
+vk1C & c::{
+    Send("{Blind}{``}")
+}
+vk1C & v::{
+    Send("{Blind}{}}")
+}
+vk1C & m::{
+    Send("{Blind}{Volume_Down}")
+}
+vk1C & ,::{
+    Send("{Blind}{Media_Prev}")
+}
+vk1C & .::{
+    Send("{Blind}{Media_Play_Pause}")
+}
+vk1C & /::{
+    Send("{Blind}{Media_Next}")
+}
+vk1C & SC073::{
+    Send("{Blind}{Del}")
+}
+;layer#shift
+
+;for surface
+;layer#2 vkcode: F14
+F14 & w::{
+    Send("{Blind}{[}")
+}
+F14 & e::{
+    Send("{Blind}{`"}")
+}
+F14 & r::{
+    Send("{Blind}{]}")
+}
+F14 & t::{
+    Send("{Blind}{|}")
+}
+F14 & i::{
+    Send("{Blind}{Escape}")
+}
+F14 & o::{
+    Send("{Blind}{Up}")
+}
+F14 & p::{
+    Send("{Blind}{CapsLock}") ;仮 todo:capslock + shiftみたいにトグルできるようにする
+}
+F14 & q::{
+    Send("{Blind}{@}")
+}
+F14 & a::{
+    Send("{Blind}{#}")
+}
+F14 & s::{
+    Send("{Blind}{(}")
+}
+F14 & d::{
+    Send("{Blind}{'}")
+}
+F14 & f::{
+    Send("{Blind}{)}")
+}
+F14 & g::{
+    Send("{Blind}{&}")
+}
+F14 & j::{
+    Send("{Blind}{Volume_Up}")
+}
+F14 & k::{
+    Send("{Blind}{Left}")
+}
+F14 & l::{
+    Send("{Blind}{Down}")
+}
+F14 & SC027::{
+    Send("{Blind}{Right}")
+}
+F14 & SC028::{
+    Send("{Blind}{SC029}")
+}
+F14 & ]::{
+    Send("{Blind}{PrintScreen}")
+}
+F14 & z::{
+    Send("{Blind}{SC073}")
+}
+F14 & x::{
+    Send("{Blind}{{}}")
+}
+F14 & c::{
+    Send("{Blind}{``}")
+}
+F14 & v::{
+    Send("{Blind}{}}")
+}
+F14 & m::{
+    Send("{Blind}{Volume_Down}")
+}
+F14 & ,::{
+    Send("{Blind}{Media_Prev}")
+}
+F14 & .::{
+    Send("{Blind}{Media_Play_Pause}")
+}
+F14 & /::{
+    Send("{Blind}{Media_Next}")
+}
+F14 & SC073::{
+    Send("{Blind}{Del}")
+}
